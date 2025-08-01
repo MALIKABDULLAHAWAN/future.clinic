@@ -95,7 +95,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Video Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden video-container">
         {/* Video Background */}
         <video
           autoPlay
@@ -105,8 +105,9 @@ const Home = () => {
           className="absolute inset-0 w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
         >
-          <source src="https://cdn.pixabay.com/vimeo/3287147/spa-23825.mp4?width=1280&hash=0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c" type="video/mp4" />
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
           <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img 
             src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
