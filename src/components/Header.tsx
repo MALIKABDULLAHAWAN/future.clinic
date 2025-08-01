@@ -39,31 +39,31 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-xl">C</span>
+          <Link to="/" className="flex items-center space-x-4">
+            <div className="w-14 h-14 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-2xl">C</span>
             </div>
             <div>
-              <h1 className="text-lg font-bold text-black leading-tight">FUTURE CLINIC</h1>
-              <p className="text-xs text-gray-600 leading-tight">MODERN BEAUTY</p>
+              <h1 className="text-xl font-bold text-black leading-tight tracking-wide">FUTURE CLINIC</h1>
+              <p className="text-sm text-gray-600 leading-tight">MODERN BEAUTY</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-10">
             {services.map((service) => (
               <div key={service.name} className="relative group">
                 <button
-                  className="flex items-center space-x-1 text-black hover:text-gray-600 transition-colors duration-300 font-medium"
+                  className="flex items-center space-x-2 text-black hover:text-gray-700 transition-colors duration-300 font-semibold text-lg"
                   onClick={() => toggleDropdown(service.name)}
                 >
                   <span>{service.name}</span>
                   {service.comingSoon && <span className="text-xs text-gray-500">(coming soon)</span>}
-                  {service.items.length > 0 && <ChevronDown className="w-4 h-4" />}
+                  {service.items.length > 0 && <ChevronDown className="w-5 h-5" />}
                 </button>
                 
                 {service.items.length > 0 && (
@@ -86,15 +86,15 @@ const Header = () => {
           </nav>
 
           {/* Contact Info & CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             <div className="text-right">
-              <p className="text-sm font-medium text-black">0415 588 449</p>
-              <p className="text-xs text-gray-600">4 Cross Street, Double Bay, NSW 2028</p>
+              <p className="text-lg font-bold text-black">0415 588 449</p>
+              <p className="text-sm text-gray-600">4 Cross Street, Double Bay, NSW 2028</p>
             </div>
-            <Link to="/appointments" className="btn-primary text-sm">
+            <Link to="/appointments" className="btn-primary text-base px-6 py-3 tracking-wide">
               BOOK NOW
             </Link>
-            <Link to="/contact" className="btn-secondary text-sm">
+            <Link to="/contact" className="btn-secondary text-base px-6 py-3 tracking-wide">
               GET IN TOUCH
             </Link>
           </div>

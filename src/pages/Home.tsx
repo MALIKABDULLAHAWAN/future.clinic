@@ -102,21 +102,21 @@ const Home = () => {
             backgroundImage: 'url(https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'
           }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-        <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight tracking-tight">
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="relative z-10 text-center text-white px-4 max-w-7xl mx-auto">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-12 leading-none tracking-tight">
             Cutting-edge Science<br />
             for Refined Lasting<br />
             beauty
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-5xl mx-auto leading-relaxed font-light">
+          <p className="text-xl md:text-2xl lg:text-3xl mb-16 max-w-6xl mx-auto leading-relaxed font-light">
             With over 20 years of expertise in skincare and well-being, we understand that true beauty is a reflection of optimal skin health, balance, and natural refinement. Achieve your beauty and wellness goals with innovative, holistic protocols, products and services delivered by world class experts.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/appointments" className="border-2 border-white text-white px-8 py-4 rounded-none font-medium hover:bg-white hover:text-black transition-colors duration-300 text-lg">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link to="/appointments" className="border-2 border-white text-white px-10 py-5 rounded-none font-medium hover:bg-white hover:text-black transition-colors duration-300 text-xl tracking-wide">
               BOOK A FREE CONSULTATION
             </Link>
-            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-colors duration-300 text-lg">
+            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-10 py-5 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-colors duration-300 text-xl tracking-wide">
               GIFT CERTIFICATES
             </Link>
           </div>
@@ -137,29 +137,29 @@ const Home = () => {
       </section>
 
       {/* Services Grid - Perfect Layout */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {services.slice(0, 4).map((service, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden mb-4">
+                <div className="relative overflow-hidden mb-6">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                <Link to={service.link} className="inline-flex items-center text-black font-medium hover:underline">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                <h3 className="text-2xl font-bold mb-3 text-black">{service.title}</h3>
+                <p className="text-gray-700 mb-6 line-clamp-3 leading-relaxed">{service.description}</p>
+                <Link to={service.link} className="inline-flex items-center text-black font-semibold hover:underline text-lg">
+                  Learn More <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link to="/services" className="btn-primary text-lg px-8 py-4">
+          <div className="text-center mt-16">
+            <Link to="/services" className="btn-primary text-xl px-10 py-5 tracking-wide">
               View all treatments
             </Link>
           </div>

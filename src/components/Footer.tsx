@@ -6,34 +6,34 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container-custom py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <span className="text-black font-bold text-xl">C</span>
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
+                <span className="text-black font-bold text-2xl">C</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold">FUTURE CLINIC</h3>
-                <p className="text-xs text-gray-400">MODERN BEAUTY</p>
+                <h3 className="text-xl font-bold tracking-wide">FUTURE CLINIC</h3>
+                <p className="text-sm text-gray-400">MODERN BEAUTY</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
               Sydney's favourite destination for timeless beauty and rejuvenation. Let your skin tell the story in the hands of our experts.
             </p>
-            <div className="space-y-2 text-sm">
-              <p>4 Cross Street Double Bay NSW 2028</p>
-              <p>0415 588 449</p>
-              <p>welcome@future.clinic</p>
-              <p>future.clinic</p>
+            <div className="space-y-3 text-base">
+              <p className="font-semibold">4 Cross Street Double Bay NSW 2028</p>
+              <p className="font-semibold">0415 588 449</p>
+              <p className="font-semibold">welcome@future.clinic</p>
+              <p className="font-semibold">future.clinic</p>
             </div>
           </div>
 
           {/* Opening Hours */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Opening hours</h4>
-            <div className="space-y-2 text-sm text-gray-300">
+            <h4 className="text-xl font-bold mb-8">Opening hours</h4>
+            <div className="space-y-3 text-base text-gray-300">
               <div className="flex justify-between">
                 <span>Mon:</span>
                 <span>9am - 5pm</span>
@@ -63,32 +63,32 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://instagram.com/futureclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/futureclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com/futureclinic"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-colors duration-300"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
+            <h4 className="text-xl font-bold mb-8">Follow Us</h4>
+            <div className="flex space-x-6">
+                              <a
+                  href="https://instagram.com/futureclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://facebook.com/futureclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300"
+                >
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://twitter.com/futureclinic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-opacity-20 transition-all duration-300"
+                >
+                  <Twitter className="w-6 h-6" />
+                </a>
             </div>
           </div>
         </div>
