@@ -29,19 +29,19 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-black text-white px-6 py-3 rounded-none font-semibold hover:bg-gray-800 transition-all duration-300 border-2 border-black tracking-wide text-base;
+    @apply bg-black text-white px-4 py-2 sm:px-6 sm:py-3 rounded-none font-semibold hover:bg-gray-800 transition-all duration-300 border-2 border-black tracking-wide text-xs sm:text-sm lg:text-base;
   }
   
   .btn-secondary {
-    @apply border-2 border-black text-black px-6 py-3 rounded-none font-semibold hover:bg-black hover:text-white transition-all duration-300 bg-white tracking-wide text-base;
+    @apply border-2 border-black text-black px-4 py-2 sm:px-6 sm:py-3 rounded-none font-semibold hover:bg-black hover:text-white transition-all duration-300 bg-white tracking-wide text-xs sm:text-sm lg:text-base;
   }
   
   .btn-outline {
-    @apply border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-none font-semibold hover:bg-white hover:text-black transition-all duration-300 tracking-wide text-base sm:text-lg;
+    @apply border-2 border-white text-white px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-none font-semibold hover:bg-white hover:text-black transition-all duration-300 tracking-wide text-xs sm:text-sm lg:text-base;
   }
   
   .section-padding {
-    @apply py-16 sm:py-20 px-4 md:px-8 lg:px-16;
+    @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 xl:px-12;
   }
   
   .container-custom {
@@ -61,6 +61,49 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm lg:text-base;
+  }
+
+  .text-responsive-sm {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .text-responsive-base {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  /* Responsive spacing utilities */
+  .space-responsive {
+    @apply space-y-2 sm:space-y-3 lg:space-y-4;
+  }
+
+  .gap-responsive {
+    @apply gap-2 sm:gap-3 lg:gap-4;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-first {
+    @apply w-full sm:w-auto;
+  }
+
+  .mobile-stack {
+    @apply flex-col sm:flex-row;
+  }
+
+  .mobile-center {
+    @apply text-center sm:text-left;
+  }
 }
 
 /* Custom scrollbar */
@@ -79,4 +122,25 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Responsive breakpoint helpers */
+@media (max-width: 640px) {
+  .mobile-only {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-only {
+    display: none;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
 }
