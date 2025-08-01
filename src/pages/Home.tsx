@@ -119,6 +119,30 @@ const Home = () => {
     }
   ];
 
+  const blogPosts = [
+    {
+      title: 'Creatures of Habit',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      date: 'Mar 25, 2025',
+      category: 'Wellbeing',
+      description: 'Adopting good habits is the foundation of longevity and vitality. Discover how small daily practices can transform your health and beauty journey.'
+    },
+    {
+      title: 'An Antidote to the Modern World',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      date: 'Mar 25, 2025',
+      category: 'Wellbeing',
+      description: 'In our fast-paced world, stress can take a toll on our skin and overall wellbeing. Learn how to find balance and restore your natural radiance.'
+    },
+    {
+      title: 'Understanding and Enhancing Pelvic Mobility for Childbirth',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      date: 'Mar 25, 2025',
+      category: 'Women\'s Health',
+      description: 'Adopting good habits is the foundation of longevity and vitality. Discover how small daily practices can transform your health and beauty journey.'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section - Video Background */}
@@ -355,6 +379,34 @@ const Home = () => {
           <Link to="/appointments" className="btn-outline text-lg px-8 py-4">
             BOOK A FREE CONSULTATION
           </Link>
+        </div>
+      </section>
+
+      {/* Health & Beauty Blog Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-4xl font-bold mb-6 text-center animate-fade-in-up">
+            Health & Beauty Blog
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post, index) => (
+              <div key={index} className="bg-white p-6 border border-gray-200 shadow-lg transform hover:scale-105 hover:-translate-y-2 hover:rotate-1 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="relative overflow-hidden mb-4 sm:mb-6 transform group-hover:scale-105 transition-all duration-500">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 sm:h-56 lg:h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-black transform group-hover:translate-x-2 transition-transform duration-300">{post.title}</h3>
+                <p className="text-gray-700 mb-4 sm:mb-6 line-clamp-3 leading-relaxed text-sm sm:text-base">{post.description}</p>
+                <Link to={`/blog/${post.category.toLowerCase().replace(/\s+/g, '-')}/${post.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center text-black font-semibold hover:underline text-base sm:text-lg transform group-hover:translate-x-2 transition-transform duration-300">
+                  Read More <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
