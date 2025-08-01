@@ -105,8 +105,8 @@ const Home = () => {
           className="absolute inset-0 w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
         >
-          <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-          <source src="https://player.vimeo.com/external/434045526.hd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=175&oauth2_token_id=57447761" type="video/mp4" />
+          <source src="https://cdn.pixabay.com/vimeo/3287147/spa-23825.mp4?width=1280&hash=0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c" type="video/mp4" />
+          <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img 
             src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
@@ -120,19 +120,19 @@ const Home = () => {
         
         {/* Content */}
         <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold mb-8 sm:mb-12 leading-none tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold mb-8 sm:mb-12 leading-none tracking-tight animate-fade-in-up">
             Cutting-edge Science<br />
             for Refined Lasting<br />
             beauty
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-16 max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-16 max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto leading-relaxed font-light animate-fade-in-up-delay">
             With over 20 years of expertise in skincare and well-being, we understand that true beauty is a reflection of optimal skin health, balance, and natural refinement. Achieve your beauty and wellness goals with innovative, holistic protocols, products and services delivered by world class experts.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Link to="/appointments" className="border-2 border-white text-white px-8 py-4 rounded-none font-medium hover:bg-white hover:text-black transition-colors duration-300 text-lg tracking-wide">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-up-delay-2">
+            <Link to="/appointments" className="border-2 border-white text-white px-8 py-4 rounded-none font-medium hover:bg-white hover:text-black transition-all duration-300 text-lg tracking-wide transform hover:scale-105 hover:rotate-1">
               BOOK A FREE CONSULTATION
             </Link>
-            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-colors duration-300 text-lg tracking-wide">
+            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-all duration-300 text-lg tracking-wide transform hover:scale-105 hover:-rotate-1">
               GIFT CERTIFICATES
             </Link>
           </div>
@@ -142,11 +142,11 @@ const Home = () => {
       {/* Excellence Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Excellence proven</h2>
-          <p className="text-xl text-gray-600 mb-8">With a 5-star rating from 141+ Google Reviews</p>
-          <div className="flex justify-center items-center space-x-2 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up">Excellence proven</h2>
+          <p className="text-xl text-gray-600 mb-8 animate-fade-in-up-delay">With a 5-star rating from 141+ Google Reviews</p>
+          <div className="flex justify-center items-center space-x-2 mb-8 animate-fade-in-up-delay-2">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+              <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400 animate-float" style={{ animationDelay: `${i * 0.1}s` }} />
             ))}
           </div>
         </div>
@@ -157,25 +157,25 @@ const Home = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {services.slice(0, 4).map((service, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden mb-4 sm:mb-6">
+              <div key={index} className="group cursor-pointer animate-3d-hover" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="relative overflow-hidden mb-4 sm:mb-6 transform group-hover:scale-105 transition-all duration-500">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-48 sm:h-56 lg:h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-48 sm:h-56 lg:h-72 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-black">{service.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-black transform group-hover:translate-x-2 transition-transform duration-300">{service.title}</h3>
                 <p className="text-gray-700 mb-4 sm:mb-6 line-clamp-3 leading-relaxed text-sm sm:text-base">{service.description}</p>
-                <Link to={service.link} className="inline-flex items-center text-black font-semibold hover:underline text-base sm:text-lg">
-                  Learn More <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                <Link to={service.link} className="inline-flex items-center text-black font-semibold hover:underline text-base sm:text-lg transform group-hover:translate-x-2 transition-transform duration-300">
+                  Learn More <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12 sm:mt-16">
-            <Link to="/services" className="btn-primary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 tracking-wide">
+          <div className="text-center mt-12 sm:mt-16 animate-fade-in-up-delay">
+            <Link to="/services" className="btn-primary text-lg sm:text-xl px-8 sm:px-10 py-4 sm:py-5 tracking-wide animate-3d-hover">
               View all treatments
             </Link>
           </div>
@@ -186,22 +186,22 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 We transform beauty and wellness with a personalised, science based touch.
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Our team of experts are equipped with many years of experience and professionalism. Working together in synergy, utilising state of the art technology in combination with protocols and products designed for maximum efficacy; enhancing your natural beauty whilst ensuring your skin is in optimal health, is our mission.
               </p>
-              <Link to="/appointments" className="btn-primary text-lg px-8 py-4">
+              <Link to="/appointments" className="btn-primary text-lg px-8 py-4 animate-3d-hover">
                 BOOK A FREE CONSULTATION
               </Link>
             </div>
-            <div className="relative">
+            <div className="relative animate-fade-in-up-delay">
               <img
                 src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Future Clinic"
-                className="w-full h-96 object-cover"
+                className="w-full h-96 object-cover rounded-lg shadow-xl transform hover:scale-105 hover:rotate-1 transition-all duration-500"
               />
             </div>
           </div>
@@ -212,10 +212,10 @@ const Home = () => {
       <section className="py-16">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">What others say about us</h2>
-            <div className="flex justify-center items-center space-x-4 mb-8">
+            <h2 className="text-4xl font-bold mb-4 animate-fade-in-up">What others say about us</h2>
+            <div className="flex justify-center items-center space-x-4 mb-8 animate-fade-in-up-delay">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">EXCELLENT</div>
+                <div className="text-3xl font-bold text-green-600 animate-glow">EXCELLENT</div>
                 <div className="text-sm text-gray-600">Based on <strong>141 reviews</strong></div>
               </div>
             </div>
@@ -223,20 +223,20 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 border border-gray-200">
+              <div key={index} className="bg-white p-6 border border-gray-200 shadow-lg transform hover:scale-105 hover:-translate-y-2 hover:rotate-1 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="flex items-center mb-4">
                   <div className="flex space-x-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400 animate-bounce-slow" style={{ animationDelay: `${i * 0.1}s` }} />
                     ))}
                   </div>
                   {testimonial.verified && (
-                    <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Verified</span>
+                    <span className="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded animate-pulse-slow">Verified</span>
                   )}
                 </div>
-                <p className="text-gray-700 mb-4 line-clamp-4">{testimonial.text}</p>
+                <p className="text-gray-700 mb-6 line-clamp-4 leading-relaxed">{testimonial.text}</p>
                 <div className="flex justify-between items-center text-sm text-gray-500">
-                  <span>{testimonial.name}</span>
+                  <span className="font-medium">{testimonial.name}</span>
                   <span>{testimonial.date}</span>
                 </div>
               </div>
