@@ -39,10 +39,10 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 w-full">
       {/* Black Top Bar with Contact Info */}
-      <div className="bg-black text-white py-2 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="bg-black text-white py-2 w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex flex-col sm:flex-row justify-center sm:justify-end items-center sm:items-center space-y-1 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -57,8 +57,8 @@ const Header = () => {
       </div>
 
       {/* Main Header Section */}
-      <div className="bg-white shadow-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="bg-white shadow-md border-b border-gray-200 w-full">
+        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="flex items-center justify-between py-3 sm:py-4 lg:py-6">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
@@ -125,7 +125,7 @@ const Header = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden border-t border-gray-200 bg-white">
+            <div className="lg:hidden border-t border-gray-200 bg-white w-full">
               <div className="py-4 sm:py-6 space-y-4 sm:space-y-6 px-4">
                 {/* Mobile Navigation */}
                 {services.map((service) => (
