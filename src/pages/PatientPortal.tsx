@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Calendar, Clock, User, FileText, Settings, LogOut, Eye, Download } from 'lucide-react';
+import { Calendar, User, FileText, LogOut, Eye } from 'lucide-react';
 
 const PatientPortal = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
