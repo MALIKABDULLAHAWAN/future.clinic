@@ -91,10 +91,10 @@ const Header = () => {
               <p className="text-base xl:text-lg font-bold text-black">0415 588 449</p>
               <p className="text-xs xl:text-sm text-gray-600">4 Cross Street, Double Bay, NSW 2028</p>
             </div>
-            <Link to="/appointments" className="btn-primary text-sm xl:text-base px-4 xl:px-6 py-2 xl:py-3 tracking-wide">
+            <Link to="/appointments" className="btn-primary text-sm px-4 py-2 tracking-wide">
               BOOK NOW
             </Link>
-            <Link to="/contact" className="btn-secondary text-sm xl:text-base px-4 xl:px-6 py-2 xl:py-3 tracking-wide">
+            <Link to="/contact" className="btn-secondary text-sm px-4 py-2 tracking-wide">
               GET IN TOUCH
             </Link>
           </div>

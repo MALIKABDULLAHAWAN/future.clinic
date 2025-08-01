@@ -29,11 +29,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-none font-semibold hover:bg-gray-800 transition-all duration-300 border-2 border-black tracking-wide text-base sm:text-lg;
+    @apply bg-black text-white px-6 py-3 rounded-none font-semibold hover:bg-gray-800 transition-all duration-300 border-2 border-black tracking-wide text-base;
   }
   
   .btn-secondary {
-    @apply border-2 border-black text-black px-6 sm:px-8 py-3 sm:py-4 rounded-none font-semibold hover:bg-black hover:text-white transition-all duration-300 bg-white tracking-wide text-base sm:text-lg;
+    @apply border-2 border-black text-black px-6 py-3 rounded-none font-semibold hover:bg-black hover:text-white transition-all duration-300 bg-white tracking-wide text-base;
   }
   
   .btn-outline {

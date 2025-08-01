@@ -103,20 +103,20 @@ const Home = () => {
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto py-20">
+        <div className="relative z-10 text-center text-white px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold mb-8 sm:mb-12 leading-none tracking-tight">
             Cutting-edge Science<br />
             for Refined Lasting<br />
             beauty
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-16 max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto leading-relaxed font-light px-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 sm:mb-16 max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto leading-relaxed font-light">
             With over 20 years of expertise in skincare and well-being, we understand that true beauty is a reflection of optimal skin health, balance, and natural refinement. Achieve your beauty and wellness goals with innovative, holistic protocols, products and services delivered by world class experts.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
-            <Link to="/appointments" className="border-2 border-white text-white px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-none font-medium hover:bg-white hover:text-black transition-colors duration-300 text-lg sm:text-xl tracking-wide">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <Link to="/appointments" className="border-2 border-white text-white px-8 py-4 rounded-none font-medium hover:bg-white hover:text-black transition-colors duration-300 text-lg tracking-wide">
               BOOK A FREE CONSULTATION
             </Link>
-            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-6 sm:px-8 lg:px-10 py-4 sm:py-5 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-colors duration-300 text-lg sm:text-xl tracking-wide">
+            <Link to="/gift-certificates" className="border-2 border-amber-400 text-amber-400 px-8 py-4 rounded-none font-medium hover:bg-amber-400 hover:text-black transition-colors duration-300 text-lg tracking-wide">
               GIFT CERTIFICATES
             </Link>
           </div>
