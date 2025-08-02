@@ -56,6 +56,13 @@ function App() {
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/patient-portal" element={<PatientPortal />} />
+            {/* Additional routes for missing services */}
+            <Route path="/treatments/indiba-therapy" element={<IndibaTherapy />} />
+            <Route path="/treatments/truflex-muscle" element={<TruflexMuscle />} />
+            <Route path="/post-op-aesthetic-face" element={<PostOpAestheticFace />} />
+            {/* Catch-all route for blog posts and other dynamic routes */}
+            <Route path="/blog/:category/:title" element={<Home />} />
+            <Route path="/services/:service" element={<Services />} />
           </Routes>
         </main>
         <Footer />

@@ -16,10 +16,22 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest('.dropdown-container')) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const services = [
     {
       name: 'Bespoke Face',
-      items: ['Skin Boosters', 'Facials', 'Post-Op Recovery', 'Synthesis Organics']
+      items: ['Skin Boosters', 'Facials', 'Post-Op Recovery', 'Synthesis Organics', 'Post-Op Aesthetic Face']
     },
     {
       name: 'Bespoke Body',
@@ -27,11 +39,11 @@ const Header = () => {
     },
     {
       name: 'Post-Op Recovery',
-      items: []
+      items: ['Post-Op Recovery', 'Post-Op Aesthetic Face']
     },
     {
       name: 'Advanced Technology',
-      items: ['Ultraformer MPT']
+      items: ['Ultraformer MPT', 'INDIBA Therapy', 'truFlex Muscle']
     },
     {
       name: 'Future Bathe',
@@ -52,6 +64,8 @@ const Header = () => {
       route = '/facials';
     } else if (item === 'Post-Op Recovery') {
       route = '/post-op-recovery';
+    } else if (item === 'Post-Op Aesthetic Face') {
+      route = '/post-op-aesthetic-face';
     } else if (item === 'Synthesis Organics') {
       route = '/facials/synthesis-organics';
     } else if (item === 'Body Contouring') {
@@ -70,6 +84,10 @@ const Header = () => {
       route = '/c-section-recovery';
     } else if (item === 'Ultraformer MPT') {
       route = '/ultraformer-mpt';
+    } else if (item === 'INDIBA Therapy') {
+      route = '/treatments/indiba-therapy';
+    } else if (item === 'truFlex Muscle') {
+      route = '/treatments/truflex-muscle';
     } else {
       route = `/services/${item.toLowerCase().replace(/\s+/g, '-')}`;
     }
@@ -102,19 +120,21 @@ const Header = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo and Brand Name */}
             <div className="flex items-center space-x-4">
-              <div className="header-logo"></div>
-              <div className="flex flex-col">
-                <span className="text-black font-bold text-lg tracking-wide">FUTURE</span>
-                <span className="text-black font-bold text-lg tracking-wide">CLINIC</span>
-                <span className="text-black font-medium text-sm tracking-wide">MODERN</span>
-                <span className="text-black font-medium text-sm tracking-wide">BEAUTY</span>
-              </div>
+              <Link to="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-200">
+                <div className="header-logo"></div>
+                <div className="flex flex-col">
+                  <span className="text-black font-bold text-lg tracking-wide">FUTURE</span>
+                  <span className="text-black font-bold text-lg tracking-wide">CLINIC</span>
+                  <span className="text-black font-medium text-sm tracking-wide">MODERN</span>
+                  <span className="text-black font-medium text-sm tracking-wide">BEAUTY</span>
+                </div>
+              </Link>
             </div>
 
             {/* Navigation Links - Desktop */}
             <nav className="hidden lg:flex items-center space-x-8">
               {services.map((service) => (
-                <div key={service.name} className="relative group">
+                <div key={service.name} className="relative group dropdown-container">
                   <button
                     onClick={() => toggleDropdown(service.name)}
                     className="flex items-center space-x-1 text-black font-medium hover:text-gray-600 transition-colors duration-200"
@@ -178,9 +198,18 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200">
           <div className="container-custom py-4">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-bold text-black">Menu</h3>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200"
+              >
+                <X className="w-5 h-5 text-black" />
+              </button>
+            </div>
             <nav className="space-y-4">
               {services.map((service) => (
-                <div key={service.name}>
+                <div key={service.name} className="dropdown-container">
                   <button
                     onClick={() => toggleDropdown(service.name)}
                     className="flex items-center justify-between w-full text-left text-black font-medium py-2"
