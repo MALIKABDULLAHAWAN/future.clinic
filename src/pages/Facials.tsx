@@ -125,7 +125,7 @@ const Facials = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div className="animate-fade-in-up">
               <p className="text-sm text-gray-500 mb-2">FACIALS</p>
@@ -144,13 +144,13 @@ const Facials = () => {
 
       {/* Benefits Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm text-gray-500 mb-2">YOUR SKIN DESERVES THE BEST TREATMENTS</p>
             <h2 className="text-4xl font-bold mb-8 text-black">What are the benefits of facials?</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
@@ -174,7 +174,7 @@ const Facials = () => {
 
       {/* Focused Treatments Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             Facials focussed on your needs
           </h2>
@@ -233,7 +233,7 @@ const Facials = () => {
 
       {/* Testimonial Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
             <div className="bg-gray-50 p-8 rounded-lg">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -259,7 +259,7 @@ const Facials = () => {
 
       {/* Ultraformer MPT Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             Introducing Facials with Ultraformer MPT
           </h2>
@@ -302,7 +302,7 @@ const Facials = () => {
 
       {/* Treatment Range Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             Explore our wide range of facials
           </h2>
@@ -337,7 +337,7 @@ const Facials = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to transform your skin?
           </h2>

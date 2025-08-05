@@ -84,7 +84,7 @@ const LymphaticDrainage = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div className="animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
@@ -105,7 +105,7 @@ const LymphaticDrainage = () => {
 
       {/* What is Manual Lymphatic Drainage Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -153,7 +153,7 @@ const LymphaticDrainage = () => {
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold text-center mb-8 text-black">
@@ -165,7 +165,7 @@ const LymphaticDrainage = () => {
                 Here are some of the benefits you may experience after this treatment:
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {benefits.map((category, index) => (
                   <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                     <div className="bg-white p-6 rounded-lg shadow-lg h-full">
@@ -189,7 +189,7 @@ const LymphaticDrainage = () => {
 
       {/* Testimonial Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
             <div className="bg-gray-50 p-8 rounded-lg">
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -209,7 +209,7 @@ const LymphaticDrainage = () => {
 
       {/* Pre/During/Post Treatment Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold text-center mb-12 text-black">
@@ -298,7 +298,7 @@ const LymphaticDrainage = () => {
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             Frequently Asked Questions
           </h2>
@@ -347,7 +347,7 @@ const LymphaticDrainage = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to experience the benefits?
           </h2>

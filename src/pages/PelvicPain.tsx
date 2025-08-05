@@ -111,7 +111,7 @@ const PelvicPain = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <p className="text-sm text-gray-500 mb-2">PELVIC PAIN</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
@@ -126,7 +126,7 @@ const PelvicPain = () => {
 
       {/* What is pelvic pain? Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -145,7 +145,7 @@ const PelvicPain = () => {
 
       {/* Why is pelvic floor care so important? Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -173,7 +173,7 @@ const PelvicPain = () => {
 
       {/* How do we help with the pelvic floor health? Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -192,7 +192,7 @@ const PelvicPain = () => {
 
       {/* Book a free consultation Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-8 text-black">
               Book a free consultation
@@ -206,7 +206,7 @@ const PelvicPain = () => {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-2xl font-bold text-black mb-8">
               WHAT OTHERS SAY ABOUT US
@@ -288,7 +288,7 @@ const PelvicPain = () => {
 
       {/* Symptoms Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -331,7 +331,7 @@ const PelvicPain = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to take control of your pelvic health?
           </h2>

@@ -92,7 +92,7 @@ const InfraredSauna = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <p className="text-sm text-gray-500 mb-2">INFRARED SAUNA</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
@@ -112,8 +112,8 @@ const InfraredSauna = () => {
 
       {/* Benefits Overview Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="bg-gray-50 p-8 rounded-lg h-full">
@@ -129,7 +129,7 @@ const InfraredSauna = () => {
 
       {/* Main Content Block - Restore in an infrared sauna */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Sauna Image */}
             <div className="animate-fade-in-up">
@@ -182,7 +182,7 @@ const InfraredSauna = () => {
 
       {/* Detailed Benefits Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl font-bold text-black mb-4">
               Infrared sauna has lots of benefits for you
@@ -193,7 +193,7 @@ const InfraredSauna = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {detailedBenefits.map((benefit, index) => (
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="bg-gray-50 p-6 rounded-lg h-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -208,7 +208,7 @@ const InfraredSauna = () => {
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             Frequently Asked Questions about infrared sauna
           </h2>
@@ -243,9 +243,9 @@ const InfraredSauna = () => {
 
       {/* Session Information Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="animate-fade-in-up">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <Clock className="w-12 h-12 text-black mx-auto mb-4" />
@@ -274,7 +274,7 @@ const InfraredSauna = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to experience the benefits?
           </h2>

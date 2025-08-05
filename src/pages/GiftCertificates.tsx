@@ -48,7 +48,7 @@ const GiftCertificates = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="container-custom relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
               Gift Certificates
@@ -76,11 +76,11 @@ const GiftCertificates = () => {
 
       {/* Popular Gift Options */}
       <section className="py-20">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 gradient-text animate-fade-in-up">
             Popular Gift Options
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularGifts.map((gift, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="relative overflow-hidden">
@@ -124,7 +124,7 @@ const GiftCertificates = () => {
 
       {/* Custom Gift Certificate */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Form */}
             <div className="animate-fade-in-up">
@@ -270,11 +270,11 @@ const GiftCertificates = () => {
 
       {/* Occasions Section */}
       <section className="py-20">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 gradient-text animate-fade-in-up">
             Perfect for Every Occasion
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 transform hover:scale-110 transition-transform duration-300">
                 <Heart className="w-8 h-8 text-white" />

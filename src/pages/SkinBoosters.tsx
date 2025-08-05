@@ -50,7 +50,7 @@ const SkinBoosters = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
               Rejurub Skin Boosters
@@ -72,8 +72,8 @@ const SkinBoosters = () => {
 
       {/* Feature/Benefit Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Why Rejurub */}
             <div className="animate-fade-in-up">
               <h2 className="text-2xl font-bold mb-6 text-black">Why Rejurub?</h2>
@@ -113,7 +113,7 @@ const SkinBoosters = () => {
 
       {/* The Future of Skin Rejuvenation */}
       <section className="py-20 bg-gradient-to-r from-teal-900 to-teal-800 text-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-in-up">
             The Future of Skin Rejuvenation is Here
           </h2>
@@ -174,7 +174,7 @@ const SkinBoosters = () => {
 
       {/* Skin Rejuvenation Just in One Month */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black animate-fade-in-up">
               Skin Rejuvenation
@@ -187,7 +187,7 @@ const SkinBoosters = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {/* Left */}
             <div className="text-center animate-fade-in-up">
               <div className="bg-yellow-100 p-6 rounded-lg mb-4">
@@ -232,7 +232,7 @@ const SkinBoosters = () => {
 
       {/* Biocompatible Material Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h2 className="text-3xl font-bold mb-6 text-black">
@@ -282,7 +282,7 @@ const SkinBoosters = () => {
 
       {/* Key Ingredients */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             The Key Ingredients
           </h2>
@@ -318,7 +318,7 @@ const SkinBoosters = () => {
 
       {/* Significant Change Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-black animate-fade-in-up">
               Significant Change in Just 4 Weeks with{' '}
@@ -390,7 +390,7 @@ const SkinBoosters = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Not sure what treatment to choose?
           </h2>
@@ -405,8 +405,8 @@ const SkinBoosters = () => {
 
       {/* Services Overview */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-lg card-hover animate-fade-in-up">
               <h3 className="text-xl font-bold mb-4 text-black">Skin needling</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -439,7 +439,7 @@ const SkinBoosters = () => {
 
       {/* Testimonials */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 text-black animate-fade-in-up">
             WHAT OTHERS SAY ABOUT US
           </h2>

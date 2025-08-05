@@ -96,7 +96,7 @@ const PostOpAestheticFace = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
               Post-Op Recovery
@@ -114,7 +114,7 @@ const PostOpAestheticFace = () => {
 
       {/* Manual Lymphatic Drainage Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -154,7 +154,7 @@ const PostOpAestheticFace = () => {
 
       {/* INDIBA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-8 text-black">
@@ -189,7 +189,7 @@ const PostOpAestheticFace = () => {
 
       {/* Post-Op Therapy Price List Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-6xl mx-auto">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-12 text-black text-center">
@@ -308,7 +308,7 @@ const PostOpAestheticFace = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to enhance your surgical results?
           </h2>

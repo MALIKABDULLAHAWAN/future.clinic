@@ -60,9 +60,7 @@ const PatientPortal = () => {
         <div className="max-w-md w-full space-y-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
+              <img src="/images/logo.svg" alt="Future Clinic Logo" className="h-20 w-auto" />
               <div>
                 <h1 className="text-2xl font-bold">FUTURE CLINIC</h1>
                 <p className="text-sm text-gray-600">MODERN BEAUTY</p>
@@ -131,12 +129,10 @@ const PatientPortal = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="container-custom py-4">
+        <div className="max-w-7xl mx-auto py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
-              </div>
+              <img src="/images/logo.svg" alt="Future Clinic Logo" className="h-18 w-auto" />
               <div>
                 <h1 className="text-xl font-bold">FUTURE CLINIC</h1>
                 <p className="text-xs text-gray-600">MODERN BEAUTY</p>
@@ -156,8 +152,8 @@ const PatientPortal = () => {
         </div>
       </header>
 
-      <div className="container-custom py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <nav className="bg-white shadow-lg p-6">
@@ -214,7 +210,7 @@ const PatientPortal = () => {
                 <h2 className="text-3xl font-bold">Dashboard</h2>
                 
                 {/* Quick Stats */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-white p-6 shadow-lg">
                     <div className="flex items-center space-x-3">
                       <Calendar className="w-8 h-8 text-blue-600" />

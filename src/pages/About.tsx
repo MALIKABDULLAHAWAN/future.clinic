@@ -70,20 +70,20 @@ const About = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
-          <div className="text-center animate-fade-in-up-3d">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black heading-responsive">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center animate-fade3d">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 text-black heading-responsive text-3d hover-scale3d">
               About Future Clinic
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-600 text-responsive">
+            <p className="text-2xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed text-gray-600 text-responsive">
               Sydney's favourite destination for timeless beauty and rejuvenation. 
               We transform beauty and wellness with a personalised, science-based touch.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay">
-              <Link to="/appointments" className="btn-responsive bg-black text-white hover:bg-gray-800 button-hover-3d">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade3d" style={{ animationDelay: '0.5s' }}>
+              <Link to="/appointments" className="btn-responsive bg-black text-white hover:bg-gray-800 btn-3d animate-float3d">
                 BOOK A CONSULTATION
               </Link>
-              <Link to="/contact" className="btn-responsive border-2 border-black text-black hover:bg-black hover:text-white button-hover-3d">
+              <Link to="/contact" className="btn-responsive border-2 border-black text-black hover:bg-black hover:text-white btn-3d animate-float3d" style={{ animationDelay: '0.3s' }}>
                 GET IN TOUCH
               </Link>
             </div>
@@ -93,7 +93,7 @@ const About = () => {
 
       {/* Tabbed Content Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center mb-12">
             {[
@@ -121,7 +121,7 @@ const About = () => {
             {activeTab === 'story' && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black heading-responsive">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black heading-responsive">
                     Our Story
                   </h2>
                   <p className="text-lg text-gray-700 mb-6 text-responsive">
@@ -146,33 +146,33 @@ const About = () => {
 
             {activeTab === 'mission' && (
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black heading-responsive">
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black heading-responsive">
                   Our Mission
                 </h2>
-                <p className="text-xl text-gray-700 mb-8 text-responsive">
+                <p className="text-2xl text-gray-700 mb-10 text-responsive">
                   To empower individuals to achieve their beauty and wellness goals through innovative, science-based treatments delivered by world-class experts in a nurturing, personalized environment.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                   <div className="text-center animate-fade-in-up-3d" style={{ animationDelay: '0.1s' }}>
                     <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                       <Star className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Excellence</h3>
-                    <p className="text-gray-700">Delivering the highest quality treatments with exceptional results</p>
+                    <h3 className="text-2xl font-bold mb-4 text-black">Excellence</h3>
+                    <p className="text-gray-700 text-lg">Delivering the highest quality treatments with exceptional results</p>
                   </div>
                   <div className="text-center animate-fade-in-up-3d" style={{ animationDelay: '0.2s' }}>
                     <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                       <Heart className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Care</h3>
-                    <p className="text-gray-700">Providing personalized attention and compassionate service</p>
+                    <h3 className="text-2xl font-bold mb-4 text-black">Care</h3>
+                    <p className="text-gray-700 text-lg">Providing personalized attention and compassionate service</p>
                   </div>
                   <div className="text-center animate-fade-in-up-3d" style={{ animationDelay: '0.3s' }}>
                     <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                       <Shield className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-black">Safety</h3>
-                    <p className="text-gray-700">Ensuring the highest standards of safety and well-being</p>
+                    <h3 className="text-2xl font-bold mb-4 text-black">Safety</h3>
+                    <p className="text-gray-700 text-lg">Ensuring the highest standards of safety and well-being</p>
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black heading-responsive">
                   Our Values
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {values.map((value, index) => (
                     <div
                       key={index}
@@ -193,8 +193,8 @@ const About = () => {
                       <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                         {value.icon}
                       </div>
-                      <h3 className="text-xl font-bold mb-3 text-black">{value.title}</h3>
-                      <p className="text-gray-700">{value.description}</p>
+                      <h3 className="text-2xl font-bold mb-4 text-black">{value.title}</h3>
+                      <p className="text-gray-700 text-lg">{value.description}</p>
                     </div>
                   ))}
                 </div>
@@ -248,11 +248,11 @@ const About = () => {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-black heading-responsive">
             What Our Clients Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -281,7 +281,7 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-responsive text-glow-3d">
             Ready to Start Your Beauty Journey?
           </h2>

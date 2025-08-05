@@ -143,18 +143,18 @@ const Services = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
-          <div className="text-center animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center animate-fade3d">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 text-black text-3d hover-scale3d">
               Our Services
             </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-gray-700 mb-10 max-w-5xl mx-auto leading-relaxed">
               Discover our comprehensive range of professional beauty and wellness treatments. 
               From advanced skin boosters to therapeutic massages, we offer cutting-edge solutions for your beauty and wellness needs.
             </p>
             <button
               onClick={handleBooking}
-              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1 liquid"
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1 liquid btn-3d animate-float3d"
             >
               BOOK APPOINTMENT
             </button>
@@ -164,7 +164,7 @@ const Services = () => {
 
       {/* Category Filter Section */}
       <section className="py-12 bg-white border-b border-gray-200">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
@@ -186,24 +186,24 @@ const Services = () => {
       {/* Featured Services Section */}
       {selectedCategory === 'All Services' && (
         <section className="py-20 bg-gray-50">
-          <div className="container-custom">
-            <div className="text-center mb-12 animate-fade-in-up">
-              <h2 className="text-4xl font-bold mb-6 text-black">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 animate-fade3d">
+              <h2 className="text-5xl font-bold mb-8 text-black text-3d hover-scale3d">
                 Featured Services
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-xl text-gray-700">
                 Our most popular and advanced treatments
               </p>
             </div>
 
-            <div className="grid-responsive">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.filter(service => service.featured).map((service, index) => (
-                <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in-up card-hover" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="p-6">
+                <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden animate-slide3d card-3d" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="p-10">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-black mb-2">{service.name}</h3>
-                        <p className="text-sm text-gray-600">{service.category}</p>
+                        <h3 className="text-3xl font-bold text-black mb-4">{service.name}</h3>
+                        <p className="text-lg text-gray-600">{service.category}</p>
                       </div>
                       <div className="text-right">
                         <p className="text-2xl font-bold text-black">{service.price}</p>
@@ -211,7 +211,7 @@ const Services = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-700 mb-4 leading-relaxed">{service.description}</p>
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">{service.description}</p>
                     
                     {service.benefits && (
                       <div className="mb-4">
@@ -221,10 +221,10 @@ const Services = () => {
                             <li key={idx} className="flex items-start text-sm text-gray-700">
                               <Sparkles className="w-4 h-4 text-blue-500 mt-0.5 mr-2 flex-shrink-0" />
                               {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                     )}
                     
                     {service.details && (
@@ -236,7 +236,7 @@ const Services = () => {
                     {service.note && (
                       <div className="bg-yellow-50 p-3 rounded-lg mb-4">
                         <p className="text-sm text-yellow-800">{service.note}</p>
-                      </div>
+                  </div>
                     )}
                     
                     <button
@@ -245,17 +245,17 @@ const Services = () => {
                     >
                       BOOK NOW
                     </button>
-                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
       )}
 
       {/* All Services Section */}
       <section className="py-20 bg-white">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-6 text-black">
               {selectedCategory === 'All Services' ? 'All Services' : selectedCategory}
@@ -337,7 +337,7 @@ const Services = () => {
 
       {/* Why Choose Our Services Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-6xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-fade-in-up">
               <h2 className="text-4xl font-bold mb-6 text-black">
@@ -348,7 +348,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="text-center animate-fade-in-up">
                 <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
@@ -377,7 +377,7 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
             Ready to Transform Your Beauty Journey?
           </h2>

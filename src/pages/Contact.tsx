@@ -28,7 +28,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="container-custom relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
               Get In Touch
@@ -56,7 +56,7 @@ const Contact = () => {
 
       {/* Contact Form & Info Section */}
       <section className="py-20">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="animate-fade-in-up">
@@ -221,26 +221,26 @@ const Contact = () => {
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 gradient-text animate-fade-in-up">
             Frequently Asked Questions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-xl font-bold mb-4">How do I book an appointment?</h3>
-              <p className="text-gray-600">You can book an appointment by calling us at 0415 588 449, emailing welcome@future.clinic, or using our online booking system.</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <h3 className="text-2xl font-bold mb-6">How do I book an appointment?</h3>
+              <p className="text-gray-600 text-lg">You can book an appointment by calling us at 0415 588 449, emailing welcome@future.clinic, or using our online booking system.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-xl font-bold mb-4">What should I expect during my first visit?</h3>
-              <p className="text-gray-600">Your first visit includes a comprehensive consultation where we discuss your goals, assess your skin, and create a personalized treatment plan.</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-2xl font-bold mb-6">What should I expect during my first visit?</h3>
+              <p className="text-gray-600 text-lg">Your first visit includes a comprehensive consultation where we discuss your goals, assess your skin, and create a personalized treatment plan.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl font-bold mb-4">Do you offer payment plans?</h3>
-              <p className="text-gray-600">Yes, we offer flexible payment options and can discuss financing plans during your consultation.</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <h3 className="text-2xl font-bold mb-6">Do you offer payment plans?</h3>
+              <p className="text-gray-600 text-lg">Yes, we offer flexible payment options and can discuss financing plans during your consultation.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <h3 className="text-xl font-bold mb-4">What is your cancellation policy?</h3>
-              <p className="text-gray-600">We require 24 hours notice for appointment cancellations. Late cancellations may incur a fee.</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg card-hover animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-2xl font-bold mb-6">What is your cancellation policy?</h3>
+              <p className="text-gray-600 text-lg">We require 24 hours notice for appointment cancellations. Late cancellations may incur a fee.</p>
             </div>
           </div>
         </div>

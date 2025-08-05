@@ -49,7 +49,7 @@ function App() {
             <Route path="/infrared-sauna" element={<InfraredSauna />} />
             <Route path="/pelvic-pain" element={<PelvicPain />} />
             <Route path="/c-section-recovery" element={<CsectionRecovery />} />
-            <Route path="/post-op-aesthetic-face" element={<PostOpAestheticFace />} />
+            <Route path="/post-op-aesthetic-face" element={<PostOpRecovery />} />
             <Route path="/ultraformer-mpt" element={<UltraformerMpt />} />
             <Route path="/treatments/advanced-technology" element={<AdvancedTechnology />} />
             <Route path="/treatments/future-bathe-coming-soon" element={<FutureBatheComingSoon />} />

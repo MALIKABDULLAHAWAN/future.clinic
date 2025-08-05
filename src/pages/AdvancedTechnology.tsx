@@ -1,341 +1,222 @@
-import { useState } from 'react';
-import { Star, Heart, Shield, Users, Award, Clock, ArrowRight, CheckCircle, Zap, Sparkles, Target } from 'lucide-react';
+import React, { useState } from 'react';
+
+const faqs = [
+  {
+    question: 'Non-surgical butt lifting',
+    answer: `Focusing on the butt and thighs this treatment contours, lifts, firms, reduces and improves cellulite and water retention. INDIBA® Deep Care uses monopolar radiofrequency at a specific frequency of 448 kHz. Research shows that the stable frequency of 448 kHz allows you to achieve three different treatment effects along with their associated results:
+
+• Hyperactivation (hyperthermal) breaks down fat/fatty deposits, detoxifies and encourages toxin drainage, increases cell metabolism and encourages collagen production.
+• Vascularisation (thermal) dilates blood vessels, increases blood flow, oxygenates tissues and cells, increases cell metabolism and encourages drainage.
+• Biostimulation (sub-thermal) activates the cell metabolic rate, increases blood circulation and activates fibroblasts.
+
+The non-surgical butt lifting treatment is 30 minutes and costs $250 AUD per session.`
+  },
+  {
+    question: 'Non-surgical breast lifting and firming',
+    answer: ''
+  },
+  {
+    question: 'Non-surgical arm contouring',
+    answer: ''
+  },
+  {
+    question: 'Belly sculpting and tightening',
+    answer: ''
+  }
+];
+
+const treatments = [
+  {
+    title: 'INDIBA Body Contouring',
+    video: '/images/indiba-therapy-img.png.webp',
+    youtubeLink: 'https://www.youtube.com/watch?v=G7zJAJLmQgU',
+    desc: `Experience a transformative journey as our INDIBA® Deep Beauty raises tissue temperature, ignites cellular vitality, and fosters the synthesis of collagen and elastin. Embrace the rejuvenating effects of improved blood flow, unveiling a radiant, youthful glow. This remarkable process not only tightens and lift your body, but also reduces unwanted fat and cellulite, allowing you to feel confident in your own skin.`,
+    price: 'Price starts from $250 AUD per session.'
+  },
+  {
+    title: 'truFlex Body Sculpting',
+    video: '/images/trueFLEX-image-e1744780890387.jpg.webp',
+    youtubeLink: 'https://www.youtube.com/watch?v=G7zJAJLmQgU',
+    desc: `Cutera truFlex technology is designed to adapt to your fitness level, shape, and goals, delivering the equivalent of 54,000 crunches in just one session. With up to 16 hand pieces targeting small and large muscle groups, truFlex helps you strengthen, firm, and tone your body effortlessly. Experience incredible benefits, including a remarkable 24% reduction in body fat and a staggering 30% increase in muscle mass.`,
+    price: 'Price is $350 AUD per session.'
+  },
+  {
+    title: 'Body Contouring',
+            video: '/images/body-contouring-treatment-mob_1.png.webp',
+    desc: `Our innovative technique combines the power of Manual Lymphatic Drainage with Madero Therapy (Spanish Wood Therapy). Enhancing your natural contours, our Remodelling Massage improves blood circulation, reduces fluid retention, cellulite and localised fat, and enhances muscle firmness with a noticeable improvement in skin tone and puffiness.`,
+    price: 'Price starts from $190 AUD per session.'
+  }
+];
 
 const AdvancedTechnology = () => {
-  const [activeTab, setActiveTab] = useState('ultraformer');
-
-  const technologies = [
-    {
-      id: 'ultraformer',
-      name: 'Ultraformer MPT',
-      subtitle: 'Advanced Ultrasound Technology',
-      description: 'Non-surgical lifting and tightening using advanced ultrasound technology for natural, long-lasting results.',
-      benefits: [
-        'Non-surgical face and body lifting',
-        'Stimulates natural collagen production',
-        'Tightens and firms skin',
-        'Reduces fine lines and wrinkles',
-        'Improves skin texture and tone',
-        'Long-lasting results'
-      ],
-      features: [
-        'Advanced ultrasound technology',
-        'Precise targeting of treatment areas',
-        'Minimal downtime',
-        'Natural-looking results',
-        'Suitable for face and body',
-        'FDA-approved technology'
-      ],
-      pricing: 'From $300-$500 per session',
-      duration: '30-60 minutes',
-      image: 'ultraformer-treatment.jpg'
-    },
-    {
-      id: 'indiba',
-      name: 'INDIBA Therapy',
-      subtitle: 'Radio Frequency Regeneration',
-      description: 'Advanced radio frequency technology that promotes tissue regeneration, accelerates healing, and reduces pain and inflammation.',
-      benefits: [
-        'Tissue regeneration and healing',
-        'Accelerated recovery process',
-        'Pain and inflammation reduction',
-        'Improved blood circulation',
-        'Enhanced skin elasticity',
-        'Post-operative care support'
-      ],
-      features: [
-        'Radio frequency technology',
-        'Deep tissue penetration',
-        'Non-invasive treatment',
-        'Suitable for all skin types',
-        'Post-surgical recovery support',
-        'Professional medical-grade technology'
-      ],
-      pricing: 'From $200-$350 per session',
-      duration: '30-90 minutes',
-      image: 'indiba-therapy.jpg'
-    },
-    {
-      id: 'truflex',
-      name: 'truFlex Muscle',
-      subtitle: 'Muscle Stimulation Technology',
-      description: 'Advanced muscle stimulation technology that provides strength training and muscle toning without traditional exercise.',
-      benefits: [
-        'Muscle strengthening and toning',
-        'Equivalent to thousands of sit-ups',
-        'Improved muscle definition',
-        'Enhanced strength and endurance',
-        'Non-invasive muscle building',
-        'Time-efficient workouts'
-      ],
-      features: [
-        'Electrical muscle stimulation',
-        'Targeted muscle groups',
-        'Customizable intensity levels',
-        'No physical exertion required',
-        'Suitable for all fitness levels',
-        'Professional-grade equipment'
-      ],
-      pricing: 'From $200-$250 per session',
-      duration: '20-40 minutes',
-      image: 'truflex-muscle.jpg'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah M.",
-      rating: 5,
-      text: "The Ultraformer MPT treatment exceeded my expectations. My skin is noticeably tighter and more youthful. Highly recommend!",
-      treatment: "Ultraformer MPT"
-    },
-    {
-      name: "Michael R.",
-      rating: 5,
-      text: "INDIBA therapy helped me recover much faster after my surgery. The pain reduction was incredible and the healing process was accelerated.",
-      treatment: "INDIBA Therapy"
-    },
-    {
-      name: "Emma L.",
-      rating: 5,
-      text: "truFlex Muscle sessions have transformed my body. I've gained muscle tone and strength without spending hours at the gym.",
-      treatment: "truFlex Muscle"
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "How long do the results last?",
-      answer: "Results vary by treatment and individual, but most advanced technology treatments provide long-lasting results when combined with proper maintenance and follow-up sessions."
-    },
-    {
-      question: "Are these treatments safe?",
-      answer: "Yes, all our advanced technology treatments use FDA-approved equipment and are performed by trained professionals. We prioritize safety and effectiveness in all our procedures."
-    },
-    {
-      question: "How many sessions do I need?",
-      answer: "The number of sessions depends on your goals and the specific treatment. We'll create a personalized treatment plan during your consultation."
-    },
-    {
-      question: "Is there any downtime?",
-      answer: "Most advanced technology treatments have minimal to no downtime, allowing you to return to your daily activities immediately after treatment."
-    }
-  ];
+  const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container-custom">
-          <div className="text-center animate-fade-in-up">
-            <p className="text-sm text-gray-500 mb-2">ADVANCED TECHNOLOGY</p>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
+    <div className="bg-white min-h-screen">
+      {/* Hero Banner Section */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white py-20 pt-32">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto animate-fade3d">
+            <p className="text-xs text-gray-500 mb-4 uppercase tracking-wide">SCULPTING & SHAPING</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-10 text-gray-900 text-3d hover-scale3d" style={{ fontFamily: 'var(--font-monument)' }}>
               Advanced Technology
             </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of beauty and wellness with our cutting-edge technologies. 
-              From non-surgical lifting to muscle stimulation, we offer the latest innovations in aesthetic treatments.
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+              Cutting-edge science for refined, lasting beauty. Experience the future of non-surgical body contouring with our advanced technology treatments.
             </p>
-            <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1 liquid">
-              BOOK YOUR CONSULTATION
+            <button 
+              onClick={() => window.open('https://www.fresha.com/a/future-clinic-modern-beauty-double-bay-4-cross-st-apd6jatz/booking?menu=true&dppub=true&_gl=1*tbuzlm*_gcl_au*MjAzNTM3MzA0MS4xNzU0MDQ4MTUz*_ga*MTM1NTUwNTQ2Ni4xNzU0MDQ4MTU0*_ga_Z9WC20429Y*czE3NTQzMTI3OTAkbzEzJGcxJHQxNzU0MzEzMjMwJGo0NyRsMCRoMA..', '_blank')}
+              className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-lg shadow-lg hover:shadow-xl btn-3d animate-float3d"
+            >
+              BOOK YOUR TREATMENT
             </button>
           </div>
         </div>
       </section>
 
-      {/* Technology Tabs Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in-up">
-              <h2 className="text-4xl font-bold mb-6 text-black">
-                Our Advanced Technologies
-              </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Discover our range of cutting-edge treatments designed to enhance your natural beauty and wellness
-              </p>
+      {/* Two Column Info Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl animate-fade3d">
+                              <img src="/images/body-contouring-treatment-mob_1.png.webp" alt="Body Contouring Treatment" className="w-full h-auto rounded-2xl object-contain max-h-96 img-3d" />
             </div>
-
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {technologies.map((tech) => (
-                <button
-                  key={tech.id}
-                  onClick={() => setActiveTab(tech.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    activeTab === tech.id
-                      ? 'bg-black text-white shadow-lg'
-                      : 'bg-gray-100 text-black hover:bg-gray-200'
-                  }`}
-                >
-                  {tech.name}
-                </button>
-              ))}
+            <div className="space-y-6 animate-fade3d" style={{ animationDelay: '0.5s' }}>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 text-3d hover-scale3d">What does non-surgical body contouring do?</h2>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p className="text-lg">
+                  Non-surgical body contouring improves blood and lymphatic circulation, revitalises and reactivates the nervous system, reactivates the production of elastin, collagen, and vitamin E, and improves muscle tone. Our treatments tighten the skin, stimulate collagen and elastin production, lift the buttocks, reduce fluid retention, and combat cellulite, leaving the skin smoother and more youthful-looking.
+                </p>
+                <p className="text-lg">
+                  Experience visible results after just one session of body contouring treatments with our skilled therapists at FUTURE CLINIC Modern Beauty. Our combination of modalities, including strong and targeted movements, wood therapy, and Radio Frequency technology, stimulate the body to eliminate toxins and fat, encouraging lymphatic drainage and reducing cellulite. Our treatments reaffirm, tone, and shape the body while rejuvenating the skin.
+                </p>
+                <p className="text-lg font-medium">
+                  We believe in enhancing your natural beauty, hence all our treatments are non-surgical.
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Tab Content */}
-            {technologies.map((tech) => (
-              <div
-                key={tech.id}
-                className={`animate-fade-in-up ${
-                  activeTab === tech.id ? 'block' : 'hidden'
-                }`}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  {/* Content */}
-                  <div>
-                    <h3 className="text-3xl font-bold mb-4 text-black">
-                      {tech.name}
-                    </h3>
-                    <p className="text-lg text-gray-600 mb-4">
-                      {tech.subtitle}
-                    </p>
-                    <p className="text-gray-700 leading-relaxed mb-8">
-                      {tech.description}
-                    </p>
-
-                    {/* Benefits */}
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold mb-4 text-black">Key Benefits</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {tech.benefits.map((benefit, index) => (
-                          <div key={index} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="mb-8">
-                      <h4 className="text-xl font-bold mb-4 text-black">Treatment Features</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {tech.features.map((feature, index) => (
-                          <div key={index} className="flex items-start">
-                            <Sparkles className="w-5 h-5 text-blue-500 mt-1 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Pricing & Duration */}
-                    <div className="bg-gray-50 p-6 rounded-lg mb-8">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <h5 className="font-bold text-black mb-2">Treatment Duration</h5>
-                          <p className="text-gray-700">{tech.duration}</p>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-black mb-2">Investment</h5>
-                          <p className="text-gray-700">{tech.pricing}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <button className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1 liquid">
-                      BOOK {tech.name.toUpperCase()}
-                    </button>
-                  </div>
-
-                  {/* Image Placeholder */}
-                  <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-                    <div className="text-center">
-                      <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                      <p className="text-gray-500 font-semibold">{tech.name}</p>
-                      <p className="text-gray-400 text-sm">Treatment Image</p>
+      {/* Treatments Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-8 text-gray-900" style={{ fontFamily: 'var(--font-monument)' }}>
+              Choose the body contouring treatment that works for you
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Our advanced technology treatments are designed to deliver exceptional results with minimal downtime
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {treatments.map((t, i) => (
+                              <div key={i} className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
+                <div className="relative w-full h-64 mb-6 rounded-xl overflow-hidden">
+                  <img src={t.video} alt={t.title} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-black bg-opacity-50 rounded-full flex items-center justify-center hover:bg-opacity-70 transition-all duration-300">
+                      <div className="w-0 h-0 border-l-6 border-l-white border-t-3 border-t-transparent border-b-3 border-b-transparent ml-1"></div>
                     </div>
                   </div>
                 </div>
+                <h3 className="font-bold text-3xl mb-8 text-gray-900">{t.title}</h3>
+                <p className="text-gray-700 mb-10 leading-relaxed flex-grow text-xl">{t.desc}</p>
+                <p className="text-lg font-semibold text-black border-t pt-4">{t.price}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in-up">
-              <h2 className="text-4xl font-bold mb-6 text-black">
-                What Our Clients Say
-              </h2>
-              <p className="text-lg text-gray-700">
-                Real results from real clients using our advanced technologies
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-bold text-black">{testimonial.name}</p>
-                      <p className="text-sm text-gray-500">{testimonial.treatment}</p>
-                    </div>
-                    <Heart className="w-6 h-6 text-red-400" />
-                  </div>
+      {/* Testimonial Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-12 rounded-3xl shadow-xl max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="mb-8">
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-2xl">★</span>
+                  ))}
                 </div>
-              ))}
+                <p className="text-xl text-gray-700 leading-relaxed italic">
+                  "I've just finished my body countour treatment with Truflex and Indiba and couldn't be any happier with the results. Not only my tummy and legs are firmer, but also slimmer and better shaped. I extremely enjoyed the sessions. Claudia is an outstanding professional who adapted each session and designed a specific protocol to my specific needs. Highly recommended!"
+                </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-lg font-semibold text-gray-900">A GR</span>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation CTA */}
+      <section className="py-20 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-300 mb-4">Not sure what treatment to choose?</p>
+            <h2 className="text-3xl font-bold mb-8 text-white">Book a free body consultation</h2>
+            <p className="text-gray-300 mb-8 text-lg">
+              Our experts will assess your needs and recommend the perfect treatment plan for your goals
+            </p>
+            <button 
+              onClick={() => window.open('https://www.fresha.com/a/future-clinic-modern-beauty-double-bay-4-cross-st-apd6jatz/booking?menu=true&dppub=true&_gl=1*tbuzlm*_gcl_au*MjAzNTM3MzA0MS4xNzU0MDQ4MTUz*_ga*MTM1NTUwNTQ2Ni4xNzU0MDQ4MTU0*_ga_Z9WC20429Y*czE3NTQzMTI3OTAkbzEzJGcxJHQxNzU0MzEzMjMwJGo0NyRsMCRoMA..', '_blank')}
+              className="bg-white text-black rounded-full px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+            >
+              BOOK NOW
+            </button>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in-up">
-              <h2 className="text-4xl font-bold mb-6 text-black">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-lg text-gray-700">
-                Everything you need to know about our advanced technology treatments
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <h3 className="text-lg font-bold text-black mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 text-gray-900" style={{ fontFamily: 'var(--font-monument)' }}>
+              How Body Contouring can help?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get answers to common questions about our advanced body contouring treatments
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <div key={i} className="border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <button
+                  className="w-full text-left px-8 py-6 font-semibold flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50 transition-colors duration-300"
+                  onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                >
+                  <span className="text-lg text-gray-900">{faq.question}</span>
+                  <span className="text-2xl text-gray-500">{openFaq === i ? '−' : '+'}</span>
+                </button>
+                {openFaq === i && (
+                  <div className="px-8 pb-8 text-gray-700 text-base leading-relaxed bg-gray-50 whitespace-pre-line">
                     {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Consultation CTA Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
-            Ready to Experience Advanced Technology?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 animate-fade-in-up-delay">
-            Book your free consultation to discover which advanced treatment is right for you
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay-2">
-            <button className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 text-lg transform hover:scale-105 hover:-translate-y-1 liquid">
-              BOOK FREE CONSULTATION
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 text-lg transform hover:scale-105 hover:rotate-1 liquid">
-              VIEW ALL TREATMENTS
+      {/* Final CTA */}
+      <section className="py-20 px-4 bg-gradient-to-r from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900" style={{ fontFamily: 'var(--font-monument)' }}>
+              Ready to transform your body?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">Buy more and save with our treatment packages</p>
+            <button 
+              onClick={() => window.open('https://www.fresha.com/a/future-clinic-modern-beauty-double-bay-4-cross-st-apd6jatz/booking?menu=true&dppub=true&_gl=1*tbuzlm*_gcl_au*MjAzNTM3MzA0MS4xNzU0MDQ4MTUz*_ga*MTM1NTUwNTQ2Ni4xNzU0MDQ4MTU0*_ga_Z9WC20429Y*czE3NTQzMTI3OTAkbzEzJGcxJHQxNzU0MzEzMjMwJGo0NyRsMCRoMA..', '_blank')}
+              className="border-2 border-black text-black rounded-full px-8 py-4 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg hover:bg-black hover:text-white"
+            >
+              BUNDLE AND GET 15% OFF
             </button>
           </div>
         </div>
@@ -344,4 +225,4 @@ const AdvancedTechnology = () => {
   );
 };
 
-export default AdvancedTechnology; 
+export default AdvancedTechnology;

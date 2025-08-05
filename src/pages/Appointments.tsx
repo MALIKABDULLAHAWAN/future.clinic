@@ -29,7 +29,7 @@ const Appointments = () => {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="container-custom relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
               Book Your Appointment
@@ -57,7 +57,7 @@ const Appointments = () => {
 
       {/* Booking Form Section */}
       <section className="py-20">
-        <div className="container-custom">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Booking Form */}
             <div className="animate-fade-in-up">
@@ -192,31 +192,31 @@ const Appointments = () => {
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container-custom">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 gradient-text animate-fade-in-up">
             Why Choose Future Clinic?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 transform hover:scale-110 transition-transform duration-300">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Expert Care</h3>
-              <p className="text-gray-600">Our team of certified professionals ensures the highest quality treatments.</p>
+              <h3 className="text-2xl font-bold mb-6">Expert Care</h3>
+              <p className="text-gray-600 text-lg">Our team of certified professionals ensures the highest quality treatments.</p>
             </div>
             <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 transform hover:scale-110 transition-transform duration-300">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Advanced Technology</h3>
-              <p className="text-gray-600">State-of-the-art equipment and cutting-edge treatments for optimal results.</p>
+              <h3 className="text-2xl font-bold mb-6">Advanced Technology</h3>
+              <p className="text-gray-600 text-lg">State-of-the-art equipment and cutting-edge treatments for optimal results.</p>
             </div>
             <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4 transform hover:scale-110 transition-transform duration-300">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Premium Experience</h3>
-              <p className="text-gray-600">Luxurious environment designed for your comfort and relaxation.</p>
+              <h3 className="text-2xl font-bold mb-6">Premium Experience</h3>
+              <p className="text-gray-600 text-lg">Luxurious environment designed for your comfort and relaxation.</p>
             </div>
           </div>
         </div>

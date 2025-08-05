@@ -1,8 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* Monument Extended Font - Premium Display Font */
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('https://fonts.cdnfonts.com/css/monument-extended') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('https://fonts.cdnfonts.com/css/monument-extended') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-monument: 'Monument Extended', 'Inter', sans-serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-secondary: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Bootstrap-like utility classes */
+.bg-primary {
+  background-color: #000000 !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.start-0 {
+  left: 0 !important;
+}
+
+.end-0 {
+  right: 0 !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.border {
+  border: 1px solid !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+}
+
+.border-start-0 {
+  border-left: 0 !important;
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-end-0 {
+  border-right: 0 !important;
+}
+
+.border-lg-0 {
+  border: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .border-lg-0 {
+    border: 0 !important;
+  }
+}
+
+.px-xx1-5 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.w-xxx1-35 {
+  width: 35% !important;
+}
+
+.w-xxx1-20 {
+  width: 20% !important;
+}
+
+.btm-footer {
+  background-color: #000000 !important;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -266,31 +418,7 @@ main {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@media (min-width: 640px) {
-  .container-custom {
-    padding: 0 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-custom {
-    padding: 0 4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container-custom {
-    padding: 0 6rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container-custom {
-    padding: 0 8rem;
-  }
+  padding: 0 1rem;
 }
 
 @media (min-width: 640px) {
@@ -299,15 +427,9 @@ main {
   }
 }
 
-@media (min-width: 768px) {
-  .container-custom {
-    padding: 0 2rem;
-  }
-}
-
 @media (min-width: 1024px) {
   .container-custom {
-    padding: 0 2.5rem;
+    padding: 0 2rem;
   }
 }
 
@@ -316,6 +438,14 @@ main {
     padding: 0 3rem;
   }
 }
+
+@media (min-width: 1536px) {
+  .container-custom {
+    padding: 0 4rem;
+  }
+}
+
+
 
 /* Enhanced Grid System */
 .grid-responsive {
@@ -973,5 +1103,263 @@ main {
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+/* Logo Slider Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left-2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-left-2 {
+  animation: scroll-left-2 30s linear infinite;
+  animation-delay: -15s;
+}
+
+/* 3D Animations */
+@keyframes rotate3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(5deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg);
+  }
+  75% {
+    transform: rotateX(-10deg) rotateY(10deg) rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) translateZ(0px);
+  }
+  50% {
+    transform: translateY(-20px) translateZ(10px);
+  }
+}
+
+@keyframes scale3d {
+  0%, 100% {
+    transform: scale(1) translateZ(0px);
+  }
+  50% {
+    transform: scale(1.05) translateZ(20px);
+  }
+}
+
+@keyframes slide3d {
+  0% {
+    transform: translateX(-100px) translateZ(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) translateZ(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade3d {
+  0% {
+    transform: translateZ(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse3d {
+  0%, 100% {
+    transform: scale(1) translateZ(0px);
+  }
+  50% {
+    transform: scale(1.1) translateZ(10px);
+  }
+}
+
+@keyframes bounce3d {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateZ(0px);
+  }
+  40% {
+    transform: translateY(-30px) translateZ(20px);
+  }
+  60% {
+    transform: translateY(-15px) translateZ(10px);
+  }
+}
+
+@keyframes spin3d {
+  0% {
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(50px);
+  }
+}
+
+@keyframes wave3d {
+  0%, 100% {
+    transform: translateY(0px) translateZ(0px) rotateX(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateZ(10px) rotateX(5deg);
+  }
+  50% {
+    transform: translateY(-20px) translateZ(20px) rotateX(10deg);
+  }
+  75% {
+    transform: translateY(-10px) translateZ(10px) rotateX(5deg);
+  }
+}
+
+/* 3D Animation Classes */
+.animate-rotate3d {
+  animation: rotate3d 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-float3d {
+  animation: float3d 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-scale3d {
+  animation: scale3d 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-slide3d {
+  animation: slide3d 1s ease-out forwards;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-fade3d {
+  animation: fade3d 1.5s ease-out forwards;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-pulse3d {
+  animation: pulse3d 2s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-bounce3d {
+  animation: bounce3d 2s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-spin3d {
+  animation: spin3d 8s linear infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.animate-wave3d {
+  animation: wave3d 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* 3D Hover Effects */
+.hover-rotate3d:hover {
+  animation: rotate3d 2s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.hover-float3d:hover {
+  animation: float3d 1s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.hover-scale3d:hover {
+  animation: scale3d 1s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.hover-pulse3d:hover {
+  animation: pulse3d 1s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* 3D Card Effects */
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg) translateZ(20px);
+}
+
+/* 3D Button Effects */
+.btn-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-5px) translateZ(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Image Effects */
+.img-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.img-3d:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+}
+
+/* 3D Text Effects */
+.text-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.text-3d:hover {
+  transform: translateZ(10px);
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
