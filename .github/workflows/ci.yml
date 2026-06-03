@@ -1,0 +1,37 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        if [ -f package.json ]; then
+          npm ci || npm install
+        elif [ -f clientside/package.json ]; then
+          cd clientside && npm install && cd ..
+        elif [ -f server/package.json ]; then
+          cd server && npm install && cd ..
+        fi
+
+    - name: Run Build
+      run: |
+        if [ -f package.json ]; then
+          npm run build --if-present
+        elif [ -f clientside/package.json ]; then
+          cd clientside && npm run build --if-present && cd ..
+        fi
